@@ -1,0 +1,68 @@
+\documentclass[12pt,openany,twocolumn]{book}
+\usepackage[hmargin=0.5in, tmargin=1in, bmargin=1.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[all]{nowidow}
+\usepackage{float}
+\pagestyle{fancy}
+\addtolength{\headheight}{2.5pt}
+\defaultfontfeatures{Mapping=tex-text,Ligatures=TeX}
+\setmainfont{Adobe Garamond Pro}
+\setlength{\columnsep}{0.25in}
+
+\begin{document}
+\input{tex/pathfinder.tex}
+\author{Jason Weatherly}
+
+% An example of a spell
+\begin{spell}{Electric Arc}{\actions{2}}{Cantrip 1}
+    \begin{spellinfo}
+        \info{Source}{Player Core, p. 328} \\
+        \info{Traditions}{arcane, primal} \\
+        \info{Range}{30 feet;}
+        \info{Targets}{one or two creatures} \\
+        \info{Defense}{basic Reflex}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        An arc of lightning leaps from one target to another. Each target takes 2d4 electricity damage with a basic Reflex save.
+    \end{spellbody}
+
+    \heightened{+1}{The damage increases by 1d4.}
+
+    \keywords{cantrip, concentrate, electricity, manipulate}
+\end{spell}
+
+% An example feat
+\begin{feat}{Energy Heart}{Evolution 1}
+    \begin{featinfo}
+        \info{Source}{Secrets of Magic, p. 67}
+    \end{featinfo}
+
+    \begin{featbody}
+        Your eidolon's heart beats with energy. Choose an energy damage type other than force. One of its unarmed attacks changes its damage type to the chosen type, and it gains resistance to that type equal to half your level (minimum 1).
+    \end{featbody}
+
+    \leads{Dual Energy Heart, Energy Resistance}
+\end{feat}
+
+% An example action
+\begin{action}{Escape}{\actions{1}}{PC 416}
+    \begin{actioninfo}
+        \keywords{attack}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose (but this action still has the attack trait).
+    \end{actionbody}
+
+    \success{Critical Success}{You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target. You can then Stride up to 5 feet.}
+
+    \success{Success}{You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target.}
+
+    \success{Critical Failure}{You don't get free, and you can't attempt to Escape again until your next turn.}
+\end{action}
+
+\end{document}

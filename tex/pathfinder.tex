@@ -1,0 +1,77 @@
+% Pathfinder 2E action commands
+% ---------------------------------------------------------
+% \freeaction - Generates the Free Action Pathfinder symbol
+% \action{1}  - Generates the Single Action Pathfinder symbol
+% \reaction   - Generates the Reaction Pathfinder symbol
+\newfontfamily\afont{Pathfinder2eActions}[Scale=MatchUppercase]
+\newcommand{\freeaction}{{\afont{f}} }
+\newcommand{\actions}[1]{{\afont{#1}}}
+\newcommand{\reaction}{{\afont{r}} }
+
+% Keywords command
+\newcommand{\keywords}[1]{
+    \textbf{Keywords} \emph{#1}
+}
+
+% New spell and action title with actions included
+% ---------------------------------------------------------
+% Unfortunately \leadsto is already a command, so it got truncated
+% to \leads.
+\newcommand{\spelltitle}[3]{#1 #2 \hfill\small{#3}}
+\newcommand{\actiontitle}[3]{#1 #2 \hfill\small{#3}}
+\newcommand{\feattitle}[2]{#1 \hfill\small{#2}}
+
+\newcommand{\info}[2]{\textbf{#1} #2}
+
+\newcommand{\heightened}[2]{\textbf{Heightened (#1)} #2}
+\newcommand{\success}[2]{\textbf{#1} #2}
+\newcommand{\leads}[1]{\textbf{Leads to:} \emph{#1}}
+
+% Spell environments
+\newenvironment{spell}[3]
+    {\subsection*{\spelltitle{#1}{#2}{#3}}}
+    {}
+
+\newenvironment{spellinfo}
+    {}
+    {\smallskip}
+
+\newenvironment{spellbody}
+    {}
+    {\smallskip}
+
+% Feat environments
+\newenvironment{feat}[2]
+    {\subsection*{\feattitle{#1}{#2}}}
+    {}
+
+\newenvironment{featinfo}
+    {}
+    {\smallskip}
+
+\newenvironment{featbody}
+    {}
+    {\smallskip}
+
+% Actions environments
+\newenvironment{action}[3]
+    {\subsection*{\actiontitle{#1}{#2}{#3}}}
+    {}
+
+\newenvironment{actioninfo}
+    {}
+    {\smallskip}
+
+\newenvironment{actionbody}
+    {}
+    {\smallskip}
+
+% A quick command for the graphical break between sections
+% \graphicspath{ {./images/} }
+
+% \newcommand{\gbreak}{
+%     \begin{figure*}[h]
+%         \centering
+%         \includegraphics[width=0.75\textwidth]{linebreak}
+%     \end{figure*}    
+% }

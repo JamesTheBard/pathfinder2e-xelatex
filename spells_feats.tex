@@ -1,0 +1,657 @@
+\documentclass[12pt,openany,twocolumn]{book}
+\usepackage[hmargin=0.5in, tmargin=1in, bmargin=1.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[all]{nowidow}
+\usepackage{float}
+\pagestyle{fancy}
+\addtolength{\headheight}{2.5pt}
+\defaultfontfeatures{Mapping=tex-text,Ligatures=TeX}
+\setmainfont{Adobe Garamond Pro}
+\setlength{\columnsep}{0.25in}
+
+\begin{document}
+\input{tex/pathfinder.tex}
+\author{Jason Weatherly}
+\chapter*{Spell List}
+
+\section*{Cantrips}
+
+% ---------------------------------------------------------
+% Cantrips
+% ---------------------------------------------------------
+\begin{spell}{Boost Eidolon}{\actions{1}}{Link Cantrip 1}
+    \begin{spellinfo}
+        \info{Source}{Secrets of Magic, p.144} \\
+        \info{Range}{100 feet;}
+        \info{Targets}{your eidolon} \\
+        \info{Duration}{1 round}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        You focus deeply on the link between you and your eidolon and boost the power of your eidolon's attacks. Your eidolon gains a +2 status bonus to damage rolls with its unarmed attacks. If your eidolon's Strikes deal more than one weapon damage die, the status bonus increases to 2 per weapon damage die, to a maximum of +8 with four weapon damage dice.
+    \end{spellbody}
+
+    \keywords{uncommon, cantrip, summoner, concentrate, manipulate}
+\end{spell}
+
+\begin{spell}{Electric Arc}{\actions{2}}{Cantrip 1}
+    \begin{spellinfo}
+        \info{Source}{Player Core, p. 328} \\
+        \info{Traditions}{arcane, primal} \\
+        \info{Range}{30 feet;}
+        \info{Targets}{one or two creatures} \\
+        \info{Defense}{basic Reflex}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        An arc of lightning leaps from one target to another. Each target takes 2d4 electricity damage with a basic Reflex save.
+    \end{spellbody}
+
+    \heightened{+1}{The damage increases by 1d4.}
+
+    \keywords{cantrip, concentrate, electricity, manipulate}
+\end{spell}
+
+\begin{spell}{Frostbite}{\actions{2}}{Cantrip 1}
+    \begin{spellinfo}
+        \info{Source}{Player Core, p. 332} \\
+        \info{Traditions}{arcane, primal} \\
+        \info{Range}{60 feet;}
+        \info{Targets}{one creature} \\
+        \info{Defense}{Fortitude}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        An orb of biting cold coalesces around your target, freezing its body. The target takes 2d4 cold damage with a basic Fortitude save. On a critical failure, the target also gains weakness 1 to bludgeoning until the start of your next turn.
+    \end{spellbody}
+
+    \heightened{+1}{The damage increases by 1d4 and the weakness on a critical failure increases by 1.}
+
+    \keywords{cantrip, cold, concentrate, manipulate}
+\end{spell}
+
+\begin{spell}{Protect Companion}{\actions{1}}{Cantrip 1}
+    \begin{spellinfo}
+        \info{Source}{Secrets of Magic, p. 123} \\
+        \info{Traditions}{arcane, divine, occult, primal} \\
+        \info{Range}{30 feet;}
+        \info{Targets}{your eidolon, or a creature with the minion trait under your control} \\
+        \info{Duration}{until the start of your next turn}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        You extend your aura, as a magical shield that protects your eidolon or minion. The target gains a +1 circumstance bonus to AC until the start of your next turn. You gain the following reaction; after using the reaction, the spell ends and you can't cast protect companion again for 10 minutes.
+
+        \textbf{Life Block \reaction Trigger} The spell's target would take damage;
+        \textbf{Effect} Reduce the triggering damage by 10, but you lose 5 Hit Points. Even if this reduces the damage to 0, the target still takes any effects that would come with the damage, such as the poison on a viper's fangs Strike.
+    \end{spellbody}
+
+    \heightened{+2}{The reaction reduces the damage by another 10, and you lose 5 more Hit Points. If you want to lose fewer Hit Points, you can choose to lower the damage reduction and HP lost to what any lower-level version of the spell could do without lowering the spell's actual level.}
+
+    \keywords{abjuration, cantrip, concentrate}
+\end{spell}
+
+\begin{spell}{Shield}{\actions{1}}{Cantrip 1}
+    \begin{spellinfo}
+        \info{Source}{Player Core, p. 356} \\
+        \info{Traditions}{arcane, divine, occult} \\
+        \info{Duration}{until the start of your next turn}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.
+
+        While the spell is in effect, you can use the Shield Block reaction with your magic shield. The shield has Hardness 5. You can use the spell's reaction to reduce damage from any spell or magical effect, even if it doesn't deal physical damage. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes.
+    \end{spellbody}
+
+    \heightened{+2}{The shield's Hardness increases by 5.}
+
+    \keywords{cantrip, concentrate, forced}
+\end{spell}
+
+\begin{spell}{Telekinetic Projectile}{\actions{2}}{Cantrip 1}
+    \begin{spellinfo}
+        \info{Source}{Player Core, p. 363} \\
+        \info{Tradition}{arcane, occult} \\
+        \info{Range}{30 feet;}
+        \info{Targets}{1 creature} \\
+        \info{Defense}{AC}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        You hurl a loose, unattended object that is within range and that has 1 Bulk or less at the target. Make a spell attack roll against the target's AC. If you hit, you deal 2d6 bludgeoning, piercing, or slashing damage—as appropriate for the object you hurled. No specific traits or magic properties of the hurled item affect the attack or the damage.
+
+        \success{Critical Success}{You deal double damage.}
+
+        \success{Success}{You deal full damage.}
+    \end{spellbody}
+
+    \heightened{+1}{The damage increases by 1d6.}
+
+    \keywords{attack, cantrip, concentrate, manipulate}
+\end{spell}
+
+% ---------------------------------------------------------
+% First Level Spells
+% ---------------------------------------------------------
+\section*{1st Level}
+
+\begin{spell}{Boost Eidolon}{\actions{2}}{Link Spell 1}
+    \begin{spellinfo}
+        \info{Source}{Secrets of Magic, p. 144} \\
+        \info{Range}{100 feet;}
+        \info{Targets}{your eidolon} \\
+        \info{Duration}{1 minute}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        You flood your eidolon with power, creating a temporary evolution in your eidolon's capabilities. Choose one of the following effects:
+
+        \begin{itemize}
+            \item Your eidolon gains low-light vision and darkvision.
+            \item Your eidolon gains scent as an imprecise sense up to 30 feet.
+            \item Your eidolon can breathe underwater and gains a swim Speed equal to its land Speed or 30 feet, whichever is less. Alternatively, if your eidolon is normally aquatic, it can breathe air and gains a land Speed equal to its swim Speed or 30 feet, whichever is less. Either way, it gains the amphibious trait.
+            \item Your eidolon gains a +20-foot status bonus to its Speed.
+        \end{itemize}
+    \end{spellbody}
+
+    \indent\textbf{Heightened (3rd)} Add the following options to the list of effects you can choose:
+    \begin{itemize}
+        \item Your eidolon becomes Large, instead of its previous size. This increases your eidolon's reach to 10 feet but doesn't change any other statistics for your eidolon. Because of the special link you share, you can ride your eidolon without getting in each other's way. If another creature tries to ride your eidolon, both you and the riding creature each regain only 2 actions at the start of your turns each round, as normal.
+        \item Your eidolon gains a climb Speed equal to its land Speed.
+    \end{itemize}
+
+    \indent\textbf{Heightened (5th)} Add the options from the 3rd-level version and the following options to the list of effects you can choose: 
+    \begin{itemize}
+        \item Your eidolon becomes Huge, instead of its previous size. This has the same effects as the 3rd-level option to become Large, except your eidolon's reach increases to 15 feet.
+        \item Your eidolon gains a fly Speed equal to its Speed.
+    \end{itemize}
+
+    \keywords{uncommon, morph, summoner, transmutation, concentrate, manipulate}
+\end{spell}
+
+\begin{spell}{Grease}{\actions{2}}{Spell 1}
+    \begin{spellinfo}
+        \info{Source}{Player Core, p. 333} \\
+        \info{Traditions}{arcane, primal} \\
+        \info{Range}{30 feet;}
+        \info{Area}{4 contiguous 5-foot squares or;}
+        \info{Targets}{1 object of Bulk 1 or less} \\
+        \info{Duration}{1 minute}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        You conjure grease, with effects based on choosing area or target.
+        \begin{itemize}
+            \item \textbf{Area:} All solid ground in the area is covered with grease. Each creature standing on the greasy surface must succeed at a Reflex save or an Acrobatics check against your spell DC or fall prone. Creatures using an action to move onto the greasy surface during the spell's duration must attempt either a Reflex save or an Acrobatics check to Balance. A creature that Steps or Crawls doesn't have to attempt a check or save.
+
+            \item \textbf{Target:} If you Cast the Spell on an unattended object, anyone trying to pick up the object must succeed at an Acrobatics check or Reflex save against your spell DC to do so. If you target an attended object, the creature that has the object must attempt an Acrobatics check or Reflex save. On a failure, the holder or wielder takes a -2 circumstance penalty to all checks that involve using the object; on a critical failure, the holder or wielder releases the item. The object lands in an adjacent square of the GM's choice. If you Cast this Spell on a worn object, the wearer gains a +2 circumstance bonus to Fortitude saves against attempts to grapple them.
+        \end{itemize}
+    \end{spellbody}
+
+    \indent\keywords{concentrate, manipulate}
+\end{spell}
+
+\begin{spell}{Runic Body}{\actions{2}}{Spell 1}
+    \begin{spellinfo}
+        \info{Source}{Player Core, p. 354} \\
+        \info{Traditions}{arcane, divine, occult, primal} \\
+        \info{Range}{touch;}
+        \info{Targets}{1 willing creature} \\
+        \info{Duration}{1 minute}
+    \end{spellinfo}
+
+    \begin{spellbody}
+        Glowing runes appear on the target's body. All its unarmed attacks become +1 striking unarmed attacks, gaining a +1 item bonus to attack rolls and increasing the number of damage dice to two.
+    \end{spellbody}
+
+    \heightened{6th}{The unarmed attacks are +2 greater striking.}
+
+    \heightened{9th}{The unarmed attacks are +3 greater striking.}
+
+    \keywords{concentrate, manipulate}
+\end{spell}
+
+% ---------------------------------------------------------
+% Character Feats
+% ---------------------------------------------------------
+
+\chapter*{Feats}
+
+\begin{feat}{Kobold Breath}{Ancestry 1}
+    \begin{featinfo}
+        \info{Source}{Advanced Player's Guide, p. 14}
+    \end{featinfo}
+
+    \begin{featbody}
+        You channel your draconic exemplar's power into a gout of energy that manifests as a 30-foot line or a 15-foot cone, dealing 1d4 damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can't use this ability again for 1d4 rounds.
+
+        At 3rd level and every 2 levels thereafter, the damage increases by 1d4. The shape of the breath, the damage type, and the saving throw match those of your draconic exemplar. This ability has the trait associated with the type of damage it deals.
+    \end{featbody}
+
+    \leads{Dragonblood Paragon, Dragon's Breath}
+\end{feat}
+
+\begin{feat}{Dubious Knowledge}{Background 1}
+    \begin{featinfo}
+        \info{Source}{Player Core, p. 254} \\
+        \info{Prerequisites}{trained in a skill with the Recall Knowledge action}
+    \end{featinfo}
+
+    \begin{featbody}
+        You're a treasure trove of information, but not all of it comes from reputable sources. When you fail (but don't critically fail) a Recall Knowledge check using any skill, you learn the correct answer and an erroneous answer, but you don't have any way to differentiate which is which. This can occur as not knowing something is significant, but not whether it's good or bad.
+    \end{featbody}
+\end{feat}
+
+\begin{feat}{Energy Heart}{Evolution 1}
+    \begin{featinfo}
+        \info{Source}{Secrets of Magic, p. 67}
+    \end{featinfo}
+
+    \begin{featbody}
+        Your eidolon's heart beats with energy. Choose an energy damage type other than force. One of its unarmed attacks changes its damage type to the chosen type, and it gains resistance to that type equal to half your level (minimum 1).
+    \end{featbody}
+
+    \leads{Dual Energy Heart, Energy Resistance}
+\end{feat}
+
+% ---------------------------------------------------------
+% Basic Actions
+% ---------------------------------------------------------
+
+\chapter*{Actions}
+
+\section*{Basic Actions}
+
+\begin{action}{Aid}{\reaction{}}{PC 416}
+    \begin{actioninfo}
+        \info{Trigger}{An ally is about to use an action that requires a skill check or attack roll.} \\
+        \info{Requirements}{The ally is willing to accept your aid, and you have prepared to help (see below).}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You try to help your ally with a task. To use this reaction, you must first prepare to help, usually by using an action during your turn. You must explain to the GM exactly how you're trying to help, and they determine whether you can Aid your ally.
+
+        When you use your Aid reaction, attempt a skill check or attack roll of a type decided by the GM. The typical DC is 15, but the GM might adjust this DC for particularly hard or easy tasks. The GM can add any relevant traits to your preparatory action or to your Aid reaction depending on the situation, or even allow you to Aid checks other than skill checks and attack rolls.
+    \end{actionbody}
+
+    \success{Critical Success}{You grant your ally a +2 circumstance bonus to the triggering check. If you're a master with the check you attempted, the bonus is +3, and if you're legendary, it's +4.}
+
+    \success{Success}{You grant your ally a +1 circumstance bonus to the triggering check.}
+
+    \success{Critical Failure}{Your ally takes a -1 circumstance penalty to the triggering check.}
+\end{action}
+
+\begin{action}{Conceal an Object}{\actions{1}}{PC 244}
+    \begin{actioninfo}
+        \keywords{manipulate, secret}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You hide a small object on your person (such as a weapon of light Bulk). When you try to sneak a concealed object past someone who might notice it, the GM rolls your Stealth check and compares it to this passive observer's Perception DC. Once the GM rolls your check for a concealed object, that same result is used no matter how many passive observers you try to sneak it past. If a creature is specifically searching you for an item, it can attempt a Perception check against your Stealth DC (finding the object on success).
+
+        You can also conceal an object somewhere other than your person, such as among undergrowth or in a secret compartment within a piece of furniture. In this case, characters Seeking in an area compare their Perception check results to your Stealth DC to determine whether they find the object.
+    \end{actionbody}
+
+    \success{Success}{The object remains undetected.}
+
+    \success{Failure}{The searcher finds the object.}
+\end{action}
+
+\begin{action}{Crawl}{\actions{1}}{PC 416}
+    \begin{actioninfo}
+        \info{Requirements}{You are prone and your Speed is at least 10 feet.} \\
+        \keywords{move}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You move 5 feet by crawling and continue to stay prone.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Delay}{\freeaction{}}{PC 416}
+    \begin{actioninfo}
+        \info{Trigger}{Your turn begins.}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You wait for the right moment to act. The rest of your turn doesn't happen yet. Instead, you're removed from the initiative order. You can return to the initiative order as a free action triggered by the end of any other creature's turn. This permanently changes your initiative to the new position. You can't use reactions until you return to the initiative order. If you Delay an entire round without returning to the initiative order, the actions from the Delayed turn are lost, your initiative doesn't change, and your next turn occurs at your original position in the initiative order.
+
+        When you Delay, any persistent damage or other negative effects that normally occur at the start or end of your turn occur immediately when you use the Delay action. Any beneficial effects that would end at any point during your turn also end. The GM might determine that other effects end when you Delay as well. Essentially, you can't Delay to avoid negative consequences that would happen on your turn or to extend beneficial effects that would end on your turn.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Drop Prone}{\actions{1}}{PC 416}
+    \begin{actionbody}
+        You fall prone.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Escape}{\actions{1}}{PC 416}
+    \begin{actioninfo}
+        \keywords{attack}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose (but this action still has the attack trait).
+    \end{actionbody}
+
+    \success{Critical Success}{You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target. You can then Stride up to 5 feet.}
+
+    \success{Success}{You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target.}
+
+    \success{Critical Failure}{You don't get free, and you can't attempt to Escape again until your next turn.}
+\end{action}
+
+\begin{action}{Interact}{\actions{1}}{PC 416}
+    \begin{actioninfo}
+        \keywords{manipulate}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, draw a weapon, swap a held item for another, open a door, or achieve a similar effect. On rare occasions, you might have to attempt a skill check to determine if your Interact action was successful.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Invest an Item}{}{GMC 219}
+    \begin{actionbody}
+        You invest your energy in an item with the invested trait as you don it. This process requires 1 or more Interact actions, usually taking the same amount of time it takes to don the item. Once you've Invested the Item, you benefit from its constant magical abilities as long as you meet its other requirements (for most invested items, the only other requirement is that you must be wearing the item). This investiture lasts until you remove the item.
+
+        You can invest no more than 10 items per day. If you remove an invested item, it loses its investiture. The item still counts against your daily limit after it loses its investiture. You reset the limit during your daily preparations, at which point you Invest your Items anew. If you're still wearing items you had invested the previous day, you can typically keep them invested on the new day, but they still count against your limit.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Leap}{\actions{1}}{PC 417}
+    \begin{actioninfo}
+        \keywords{move}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You take a short horizontal or vertical jump. Jumping a greater distance requires using the Athletics skill for a High Jump or Long Jump.
+
+        \begin{itemize}
+            \item \textbf{Horizontal Jump} up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space where your Leap ends (meaning you can typically clear a 5-foot gap, or a 10-foot gap if your Speed is 30 feet or more). You can't make a horizontal Leap if your Speed is less than 15 feet.
+            \item \textbf{Vertical Jump} up to 3 feet vertically and 5 feet horizontally onto an elevated surface.
+        \end{itemize}
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Ready}{\actions{2}}{PC 417}
+    \begin{actioninfo}
+        \keywords{concentrate}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You prepare to use an action that will occur outside your turn. Choose a single action or free action you can use, and designate a trigger. Your turn then ends. If the trigger you designated occurs before the start of your next turn, you can use the chosen action as a reaction (provided you still meet the requirements to use it). You can't Ready a free action that already has a trigger.
+
+        If you have a multiple attack penalty and your readied action is an attack action, your readied attack takes the multiple attack penalty you had at the time you used Ready. This is one of the few times the multiple attack penalty applies when it's not your turn.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Release}{\freeaction{}}{PC 417}
+    \begin{actioninfo}
+        \keywords{manipulate}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You release something you're holding in your hand or hands. This might mean dropping an item, removing one hand from your weapon while continuing to hold it in another hand, releasing a rope suspending a chandelier, or performing a similar action. Unlike most manipulate actions, Release does not trigger reactions that can be triggered by actions with the manipulate trait (such as Reactive Strike).
+
+        If you want to prepare to Release something outside of your turn, use the Ready activity.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Seek}{\actions{1}}{PC 417}
+    \begin{actioninfo}
+        \keywords{concentrate, secret}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You scan an area for signs of creatures or objects, possibly including secret doors or hazards. Choose an area to scan. The GM determines the area you can scan with one Seek action—almost always 30 feet or less in any dimension. The GM might impose a penalty if you search far away from you or adjust the number of actions it takes to Seek a particularly cluttered area.
+
+        The GM attempts a single secret Perception check for you and compares the result to the Stealth DCs of any undetected or hidden creatures in the area, or the DC to detect each object in the area (as determined by the GM or by someone Concealing the Object). A creature you detect might remain hidden, rather than becoming observed, if you're using an imprecise sense or if an effect (such as invisibility) prevents the subject from being observed.
+    \end{actionbody}
+
+    \success{Critical Success}{Any undetected or hidden creature you critically succeeded against becomes observed by you. You learn the location of objects in the area you critically succeeded against.}
+
+    \success{Success}{Any undetected creature you succeeded against becomes hidden from you instead of undetected, and any hidden creature you succeeded against becomes observed by you. You learn the location of any object or get a clue to its whereabouts, as determined by the GM.}
+\end{action}
+
+\begin{action}{Sense Motive}{\actions{1}}{PC 417}
+    \begin{actioninfo}
+        \keywords{concentrate, secret}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You try to tell whether a creature's behavior is abnormal. Choose one creature and assess it for odd body language, signs of nervousness, and other indicators that it might be trying to deceive someone. The GM attempts a single secret Perception check for you and compares the result to the Deception DC of the creature, the DC of a spell affecting the creature's mental state, or another appropriate DC determined by the GM. You typically can't try to Sense the Motive of the same creature again until the situation changes significantly.
+    \end{actionbody}
+
+    \success{Critical Success}{You determine the creature's true intentions and get a solid idea of any mental magic affecting it.}
+
+    \success{Success}{You can tell whether the creature is behaving normally, but you don't know its exact intentions or what magic might be affecting it.}
+
+    \success{Failure}{You detect what a deceptive creature wants you to believe. If they're not being deceptive, you believe they're behaving normally.}
+
+    \success{Critical Failure}{You get a false sense of the creature's intentions.}
+\end{action}
+
+\begin{action}{Stand}{\actions{1}}{PC 418}
+    \begin{actioninfo}
+        \keywords{move}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You stand up from prone.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Step}{\actions{1}}{PC 418}
+    \begin{actioninfo}
+        \info{Requirements}{Your Speed is at least 10 feet.} \\
+        \keywords{move}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You carefully move 5 feet. Unlike most types of movement, Stepping doesn't trigger reactions, such as Reactive Strike, that can be triggered by move actions or upon leaving or entering a square.
+
+        You can't Step into difficult terrain, and you can't Step using a Speed other than your land Speed.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Stride}{\actions{1}}{PC 418}
+    \begin{actioninfo}
+        \keywords{move}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You move up to your Speed.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Strike}{\actions{1}}{PC 418}
+    \begin{actioninfo}
+        \keywords{attack}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You attack with a weapon you're wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll an attack roll using the attack modifier for the weapon or unarmed attack you're using, and compare the result to the target creature's AC to determine the effect.
+    \end{actionbody}
+
+    \success{Critical Success}{You make a damage roll according to the weapon or unarmed attack and deal double damage (see Doubling and Halving Damage for rules on doubling damage).}
+
+    \success{Success}{You make a damage roll according to the weapon or unarmed attack and deal damage.}
+\end{action}
+
+\begin{action}{Take Cover}{\actions{1}}{PC 418}
+    \begin{actioninfo}
+        \info{Requirements}{You are benefiting from cover, are near a feature that allows you to take cover, or are prone.}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You press yourself against a wall or duck behind an obstacle to take better advantage of cover. If you would have standard cover, you instead gain greater cover, which provides a +4 circumstance bonus to AC; to Reflex saves against area effects; and to Stealth checks to Hide, Sneak, or otherwise avoid detection. Otherwise, you gain the benefits of standard cover (a +2 circumstance bonus instead). This lasts until you move from your current space, use an attack action, become unconscious, or end this effect as a free action.
+    \end{actionbody}
+\end{action}
+
+% ---------------------------------------------------------
+% Special Actions
+% ---------------------------------------------------------
+\section*{Specialty Actions}
+
+\begin{action}{Activate an Item}{}{GMC 220}
+    \begin{actioninfo}
+        \info{Requirements}{You can Activate an Item with the \emph{invested} trait only if it's invested by you. If an activation has the \emph{manipulate} trait, you can activate it only if you're wielding the item (if it's a held item) or touching it with a free hand (if it's another type of item).}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        Some items produce their effects only when used properly in the moment. Others always offer the same benefits as their mundane counterparts when worn but have magical abilities that can only be gained by further spending actions. An activation lists the number of actions it takes and any traits of the activation and its effect. This information appears in the item's Activate entry.
+
+        If an item is used up when activated, as is the case for consumable items, its Activate entry appears toward the top of the stat block. For permanent items with activated abilities, the Activate entry is a paragraph in the description. This description usually has a name to indicate what's happening when you activate it. Activations are not necessarily magical—for instance, drinking an alchemical elixir isn't normally a magical effect.
+
+        \textbf{Long Activation Times} Some items take minutes or hours to activate. You can't use other actions or reactions while activating such an item, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these activations have the exploration trait, and you can't activate them in an encounter. If combat breaks out while you're activating one, your activation is disrupted (see the Disrupting Activations sidebar).
+
+        \textbf{Limited Activations} Some items can be activated only a limited number of times per day, as described in the item's entry. This limit is independent of any costs for activating the item. The limit resets during your daily preparations. The limit is inherent to the item, so if an ability that can be used only once per day is used, it doesn't refresh if another creature later invests or tries to activate the item.
+
+        \textbf{Cast a Spell} If an item lists ``Cast a Spell'' after ``Activate,'' you have to use the same actions as casting the spell to Activate the Item, unless noted otherwise. This happens when the item replicates a spell. You must have a spellcasting class feature to Activate an Item with this activation. Refer to the spell's stat block to determine which actions you must spend to Activate the Item to cast the spell. You essentially go through the same process you normally do to cast the spell but draw the energy for the spell from the magic item. All the normal traits of the spell apply when you cast it by Activating an Item.
+
+        \textbf{Sustaining Activations} Some items, once activated, have effects that can be sustained if you concentrate on them. Sustaining an effect requires using the Sustain action (Player Core 419). If an item's description states that you can sustain the effect, that effect lasts until the end of your turn in the round after you Activated the Item. You can use a Sustain action on that turn to extend the duration.
+
+        \textbf{Dismissing Activations} Some item effects can be dismissed, ending the duration early due to you or the target taking action. Dismissing an activation requires using the Dismiss action (Player Core 419).
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Arrest a Fall}{\reaction{}}{PC 418}
+    \begin{actioninfo}
+        \info{Trigger}{You fall.} \\
+        \info{Requirements}{You have a fly Speed.}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You attempt your choice of an Acrobatics check or Reflex save to slow your fall. The DC is typically 15, but it might be higher due to air turbulence or other circumstances.
+    \end{actionbody}
+
+    \success{Success}{You take no damage from the fall.}
+\end{action}
+
+\begin{action}{Avert Gaze}{\actions{1}}{PC 419}
+    \begin{actionbody}
+        You avert your gaze from danger, such as a medusa's gaze. You gain a +2 circumstance bonus to saves against visual abilities that require you to look at a creature or object, such as a medusa's petrifying gaze. Your gaze remains averted until the start of your next turn.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Burrow}{\actions{1}}{PC 419}
+    \begin{actioninfo}
+        \info{Requirements}{You have a burrow Speed.} \\
+        \keywords{move}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can't burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Cast a Spell}{}{PC 299}
+    \begin{actionbody}
+        The casting of a spell can range from a simple word of magical might that creates a fleeting effect to a complex process taking hours to cast and producing a long-term impact. Casting a spell requires the caster to make gestures and utter incantations, so being unable to speak prevents spellcasting for most casters. If your character has a long term disability that prevents or complicates them from speaking (as described in GM Core), work with the GM to determine an analogous way they cast their spells, such as tapping in code on their staff or whistling.
+
+        Spellcasting creates obvious sensory manifestations, such as bright lights, crackling sounds, and sharp smells from the gathering magic. Nearly all spells manifest a spell signature—a colorful, glowing ring of magical runes that appears in midair, typically around your hands, though what kind of spellcaster you are can affect this— academic wizards typically have neat and ordered spell signatures, while a druid's might be more organic and a cleric's might be inspired by their deity. How spellcasting looks can vary from one spellcasting tradition or class to another, or even from person to person. You have a great deal of freedom in flavoring your character's magic however you wish!
+
+        Spells can vary in how many actions they take, as shown in the spell's stat block. You cast cantrips, spells from spell slots, and focus spells using the same process, but must expend the spell when casting a spell from a spell slot and must spend 1 Focus Point to cast a focus spell. Some rules will refer to the Cast a Spell activity, such as ``if the next action you use is to Cast a Spell.'' Any spell qualifies as a Cast a Spell activity, and any characteristics of the spell use those of the specific spell you're casting.
+
+        \textbf{Costs and Loci} Some spells require you to pay a cost or provide a locus. If the spell lists a cost, you must have the listed money, valuable materials, or other resources to cast the spell (such as gems or magical reagents), and they're expended during the casting.
+
+        A locus is an object that funnels or directs the magical energy of the spell but is not consumed in its casting. As part of Casting the Spell, you retrieve the locus (if necessary, and if you have a free hand), and you can put it away again if you so choose. Loci tend to be expensive, and you need to acquire them in advance to cast the spell, but they aren't expended like costs are. Unless noted otherwise, a \emph{locus} has negligible Bulk.
+
+        \textbf{Long Casting Times} Some spells take minutes or hours to cast. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted (see Disrupted and Lost Spells below).
+
+        \textbf{Disrupted and Lost Spells} Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot and spent the spell's costs and actions. If a spell is disrupted during a Sustain action, the spell immediately ends. The full rules for disrupting actions appear on page 415.
+    \end{actionbody}
+\end{action}
+    
+\begin{action}{Dismiss}{\actions{1}}{PC 419}
+    \begin{actioninfo}
+        \keywords{concentrate}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You end an effect that states you can Dismiss it. Dismissing ends the entire effect unless noted otherwise.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Fly}{\actions{1}}{PC 419}
+    \begin{actioninfo}
+        \info{Requirements}{You have a fly Speed.} \\
+        \keywords{move}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You move through the air up to your fly Speed. Moving upward (straight up or diagonally) uses the rules for moving through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don't take falling damage. You can use an action to Fly 0 feet to hover in place. If you're airborne at the end of your turn and didn't use a Fly action this round, you fall.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Grab an Edge}{\reaction{}}{PC 419}
+    \begin{actioninfo}
+        \info{Trigger}{You fall from or past an edge or handhold.} \\
+        \info{Requirements}{Your hands are not tied behind your back or otherwise restrained} \\
+        \keywords{manipulate}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        When you fall off or past an edge or other handhold, you can try to grab it, potentially stopping your fall. You must succeed at your choice of an Acrobatics check or a Reflex save, usually at the Climb DC. If you grab the edge or handhold, you can then Climb up using Athletics.
+    \end{actionbody}
+
+    \success{Critical Success}{You grab the edge or handhold, whether or not you have a hand free, typically by using a suitable held item to catch yourself (catching a battle axe on a ledge, for example). You still take damage from the distance fallen so far, but you treat the fall as though it were 30 feet shorter.}
+
+    \success{Success}{If you have at least one hand free, you grab the edge or handhold, stopping your fall. You still take damage from the distance fallen so far, but you treat the fall as though it were 20 feet shorter. If you have no hands free, you continue to fall as if you had failed the check.}
+
+    \success{Critical Failure}{You continue to fall, and if you've fallen 20 feet or more before you use this reaction, you take 10 bludgeoning damage from the impact for every 20 feet fallen.}
+\end{action}
+
+\begin{action}{Mount}{\actions{1}}{PC 419}
+    \begin{actioninfo}
+        \info{Requirements}{You are adjacent to a creature that is at least one size larger than you and is willing to be your mount.} \\
+        \keywords{move}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You move onto the creature and ride it. If you're already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Point Out}{\actions{1}}{PC 419}
+    \begin{actioninfo}
+        \info{Requirements}{A creature is undetected by one or more of your allies but isn't undetected by you.} \\
+        \keywords{auditory, manipulate, visual}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You indicate a creature that you can see to one or more allies, gesturing in a direction and describing the distance verbally. That creature is hidden to your allies, rather than undetected. This works only for allies who can see you and are in a position where they could potentially detect the target. If your allies can't hear or understand you, they must succeed at a Perception check against the creature's Stealth DC or they misunderstand and believe the target is in a different location.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Raise a Shield}{\actions{1}}{PC 419}
+    \begin{actioninfo}
+        \info{Requirements}{You are weilding a shield.}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.
+    \end{actionbody}
+\end{action}
+
+\begin{action}{Sustain}{\actions{1}}{PC 419}
+    \begin{actioninfo}
+        \keywords{concentrate}
+    \end{actioninfo}
+
+    \begin{actionbody}
+        Choose one of your effects that has a sustained duration or lists a special benefit when you Sustain it. Most such effects come from spells or magic item activations. If the effect has a sustained duration, its duration extends until the end of your next turn. (Sustaining more than once in the same turn doesn't extend the duration to subsequent turns.) If an ability can be sustained but doesn't list how long, it can be sustained up to 10 minutes.
+
+        An effect might list an additional benefit that occurs if you Sustain it, and this can even appear on effects that don't have a sustained duration. If the effect has both a special benefit and a sustained duration, your Sustain action extends the duration as well as having the special benefit.
+
+        If your Sustain action is disrupted, the ability ends.
+    \end{actionbody}
+\end{action}
+
+\end{document}
